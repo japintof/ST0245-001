@@ -113,17 +113,17 @@ public class Octree
      */
     public void nuevoOctree(LinkedList<Bee> abejas,ArrayList<Double> mins,int sector) {
         if (sector==0) {
-            octree(abejas,mins,midD/2,midW/2,midH/2);
+            octree(abejas,mins,midD,midW,midH);
         } else if (sector==1) {
             double nuevoH=mins.get(2)+midH;
             mins.remove(2);
             mins.add(2,nuevoH);
-            octree(abejas,mins,midD/2,midW/2,midH/2);
+            octree(abejas,mins,midD,midW,midH);
         } else if (sector==2) {
             double nuevoW=mins.get(1)+midW;
             mins.remove(1);
             mins.add(1,nuevoW);
-            octree(abejas,mins,midD/2,midW/2,midH/2);
+            octree(abejas,mins,midD,midW,midH);
         } else if (sector==3) {
             double nuevoH=mins.get(2)+midH;
             mins.remove(2);
@@ -131,12 +131,12 @@ public class Octree
             double nuevoW=mins.get(1)+midW;
             mins.remove(1);
             mins.add(1,nuevoW);
-            octree(abejas,mins,midD/2,midW/2,midH/2);
+            octree(abejas,mins,midD,midW,midH);
         } else if (sector==4) {
             double nuevoD=mins.get(0)+midD;
             mins.remove(0);
             mins.add(0,nuevoD);
-            octree(abejas,mins,midD/2,midW/2,midH/2);
+            octree(abejas,mins,midD,midW,midH);
         } else if (sector==5) {
             double nuevoD=mins.get(0)+midD;
             mins.remove(0);
@@ -144,7 +144,7 @@ public class Octree
             double nuevoH=mins.get(2)+midH;
             mins.remove(2);
             mins.add(2,nuevoH);
-            octree(abejas,mins,midD/2,midW/2,midH/2);
+            octree(abejas,mins,midD,midW,midH);
         } else if (sector==6) {
             double nuevoD=mins.get(0)+midD;
             mins.remove(0);
@@ -152,7 +152,7 @@ public class Octree
             double nuevoW=mins.get(1)+midW;
             mins.remove(1);
             mins.add(1,nuevoW);
-            octree(abejas,mins,midD/2,midW/2,midH/2);
+            octree(abejas,mins,midD,midW,midH);
         } else {
             double nuevoD=mins.get(0)+midD;
             mins.remove(0);
@@ -163,7 +163,7 @@ public class Octree
             double nuevoH=mins.get(2)+midH;
             mins.remove(2);
             mins.add(2,nuevoH);
-            octree(abejas,mins,midD/2,midW/2,midH/2);
+            octree(abejas,mins,midD,midW,midH);
         }
     }
 
